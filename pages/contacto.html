@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link del css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto - TecnoPoint</title>
+</head>
+
+<body>
+    <header>
+        <!-- Logo de la tiends -->
+        <div class="logoHeader">
+            <a href="index.html">
+                <img src="../assets/img/logo_tecno_point.png" alt="logo de la tienda">
+            </a>
+        </div>
+        <!-- Menú de navegacion -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="promociones.html">Promociones</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Información principal  -->
+    <main id="contacto">
+        <h1>Contactanos</h1>
+        <div class="contenedor">
+            <!-- seccion son redes sociales -->
+            <section>
+                <div class="contactoTitulo">
+                    <h2>Conoceme</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi dolore neque tenetur facere
+                        ipsa doloremque maxime debitis sed perferendis porro illo eveniet, expedita libero asperiores
+                        dignissimos architecto repudiandae perspiciatis.
+                    </p>
+                </div>
+                <ul class="contactoRedes">
+                    <li>
+                        <a href="https://www.facebook.com">facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com">Whatsapp</a>
+                    </li>
+                </ul>
+            </section>
+            <!-- seccion para contactos -->
+            <section id="contactoForm">
+                <div class="contactoTitulo">
+                    <h2>Contactame</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi dolore neque tenetur facere
+                        ipsa doloremque maxime debitis sed perferendis porro illo eveniet, expedita libero asperiores
+                        dignissimos architecto repudiandae perspiciatis.
+                    </p>
+                </div>
+                <!--inicio del formulario-->
+                <form>
+                    <div class="nombre">
+                        <label for="nombre">Nombre*</label>
+                        <input id="nombre" type="text" name="nombre" placeholder="ej.:Luis" required />
+                    </div>
+                    <div class="apellido">
+                        <label for="apellido">Apellido*</label>
+                        <input id="apellido" type="text" name="apellido" placeholder="ej.:Alcova" required />
+                    </div>
+                    <div class="email">
+                        <label for="email">Email *</label>
+                        <input id="email" type="email" name="email" placeholder="ej.:luisalcova@example.com" required />
+                    </div>
+                    <div class="from-txt">
+                        <label for="comment">Mensaje *</label>
+                        <textarea id="comment" name="comment" rows="5" cols="50" required="required"
+                            placeholder="Escribe aquí tu comentario:"></textarea>
+
+                        <button type="submit" value="Enviar">Enviar</button>
+                    </div>
+                </form>
+                <!--fin del formulario-->
+            </section>
+        </div>
+    </main>
+    <!-- seccion del footer -->
+    <footer>
+        <p>Todos los derechos reservados ©</p>
+    </footer>
+</body>
+
+</html>

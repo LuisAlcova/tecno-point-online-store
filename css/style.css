@@ -1,0 +1,191 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Estilos de cabecera */
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    z-index: 10;
+    background: #292929;
+    text-align: center;
+}
+
+header .logoHeader {
+    width: 180px;
+    height: 100px;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+/* estilos del inicio*/
+main {
+    margin-top: 120px;
+    display: flex;
+    height: 100vh;
+}
+
+main .inicioImg {
+    width: 50%;
+    height: 100%;
+}
+
+main .inicioImg img {
+    width: 100%;
+    height: 100%;
+}
+
+main .inicioDescripcion {
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    background-color: #F8F8F8;
+    padding: 150px 100px;
+}
+
+main h1 {
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+main .inicioDescripcion h2 {
+    font-size: 20px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+/* estilos del promociones*/
+#mainPromociones {
+    margin-top: 120px;
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+}
+
+.imgProducto {
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    /* Opcional: para agregar espacio entre las imágenes */
+    vertical-align: top;
+}
+
+#mainPromociones section img {
+    width: 100%;
+    height: 100%;
+}
+
+#mainPromociones section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/* estilos del productos*/
+
+#mainProductos section img {
+    width: 100%;
+    height: 100%;
+}
+
+#mainProductos .listaProductos {
+    text-align: center;
+}
+
+/* estilos de contacto */
+#contacto {
+    margin-top: 120px;
+    height: 100vh;
+    display: inline-block;
+}
+
+#contacto .contenedor {
+    display: flex;
+    border: solid blue;
+    border-radius: 15px;
+    margin: 0 30px;
+}
+
+#contacto .contenedor section {
+    padding: 20px 50px;
+}
+
+#contacto .contenedor section .contactoTitulo {
+    padding: 20px;
+}
+
+#contacto .contenedor section .contactoTitulo h2 {
+    padding: 10px 0;
+}
+ input {
+    margin: 10px;
+ }
+
+/* estilos de nosotros*/
+#mainNosotros {
+    margin-top: 120px;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+}
+
+main .nosotrosDescripcion p {
+    margin: 10px 200px;
+}
+
+main .nosotrosMap h4 {
+    margin-bottom: 10px;
+}
+
+/* estilos de footer */
+footer {
+    background: #292929;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding: 40px 0;
+    color: white;
+    font-size: 12px;
+
+}
