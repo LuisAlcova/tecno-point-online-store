@@ -36,8 +36,10 @@ header img {
     height: 100%;
 }
 
-header nav ul {
+header nav .navHeader {
     list-style: none;
+    display: flex;
+    gap: 15px;
 }
 
 header nav ul li {
@@ -52,30 +54,16 @@ header nav ul li a {
     font-size: 20px;
 }
 
+header nav ul li a:hover {
+    color: #0808eb;
+}
+
 /* estilos del inicio*/
-main {
-    margin-top: 120px;
-    display: flex;
-    height: 100vh;
+.card-img-top {
+    height: 600px; 
+    object-fit: cover;
 }
 
-main .inicioImg {
-    width: 50%;
-    height: 100%;
-}
-
-main .inicioImg img {
-    width: 100%;
-    height: 100%;
-}
-
-main .inicioDescripcion {
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    background-color: #F8F8F8;
-    padding: 150px 100px;
-}
 
 main h1 {
     color: blue;
@@ -85,49 +73,176 @@ main h1 {
     text-align: center;
 }
 
-main .inicioDescripcion h2 {
-    font-size: 20px;
-    font-style: italic;
-    padding-bottom: 10px;
-}
-
 /* estilos del promociones*/
+
 #mainPromociones {
     margin-top: 120px;
+    text-align: center;
+    padding: 0 120px;
     height: 100vh;
     width: 100%;
     display: inline-block;
 }
 
-.imgProducto {
-    width: 250px;
-    height: 200px;
-    display: inline-block;
-    margin: 10px;
-    /* Opcional: para agregar espacio entre las imágenes */
-    vertical-align: top;
+#mainPromociones h1 {
+    margin-bottom: 20px;
 }
 
-#mainPromociones section img {
-    width: 100%;
-    height: 100%;
+/* Grilla de Flexbox */
+.grillaPromo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-#mainPromociones section h2 {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 10px;
+.cardPromo {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.cardPromo img {
+    width: 100%; 
+    height: auto;
+    max-height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.cardPromo div {
+    width: 200px;
+    height: 150px;
+}
+
+.cardPromo h2 {
+    font-size: 1.2rem;
+    color: #ff5733;
+}
+
+.cardPromo h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+span.precioAntes {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.cardPromo button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cardPromo button:hover {
+    background-color: #c44129;
+}
+
 
 /* estilos del productos*/
 
-#mainProductos section img {
-    width: 100%;
+/* Estilos del contenedor principal */
+#mainProductos {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
 }
 
-#mainProductos .listaProductos {
-    text-align: center;
+.listaProductos section h2 {
+    padding: 20px;
+    text-align: left;
+}
+
+.listaProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Estilos para la grilla */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Estilos para las tarjetas de productos */
+.cardProducto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #f4f4f4;
+    border-radius: 5%;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 3px 10px #a7a7a7;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Imagen dentro de la tarjeta */
+.cardProducto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Estilos para el texto dentro de la tarjeta */
+.cardProducto h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.cardProducto span {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* estilos del boton agregar al carrito */
+.cardProducto button {
+    border: solid blue 1px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+/* estilos del input buscar */
+.inputBuscar {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.inputBuscar input {
+    width: 100%;
+    padding: 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+}
+
+
+.inputBuscar::before {
+    content: '\f002';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 90px;
+    top: 40%;
+    color: #ccc;
 }
 
 /* estilos de contacto */
@@ -155,9 +270,42 @@ main .inicioDescripcion h2 {
 #contacto .contenedor section .contactoTitulo h2 {
     padding: 10px 0;
 }
- input {
+
+input {
     margin: 10px;
- }
+}
+
+.contactoRedes ul li {
+    margin: 30px 20px;
+    list-style-type: none;
+}
+
+.contactoRedes ul li i {
+    font-size: 30px;
+    color: #1d1de1;
+    margin-right: 15px;
+}
+
+.contactoRedes ul li i:hover {
+    color: #0808eb;
+    cursor: pointer;
+}
+
+.contactoRedes ul li a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.contactoRedes ul li a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.contactoRedes ul li a i:hover {
+    transform: skew(190deg)
+}
+
 
 /* estilos de nosotros*/
 #mainNosotros {
@@ -171,21 +319,193 @@ main .nosotrosDescripcion p {
     margin: 10px 200px;
 }
 
-main .nosotrosMap h4 {
+main .nosotrosMap h2 {
     margin-bottom: 10px;
+}
+
+#nuestroLocal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#nuestroLocal div {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nuestroLocal iframe,
+#nuestroLocal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nuestroLocal div:first-child {
+    grid-column: span 1;
+}
+
+#nuestroLocal div:nth-child(2) {
+    grid-column: span 1;
 }
 
 /* estilos de footer */
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: #292929;
-    height: 100px;
+    height: 10%;
     width: 100%;
-    text-align: center;
+    padding: 20px;
+}
+
+footer nav .navFooter {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: small;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
 }
 
 footer p {
-    padding: 40px 0;
+    padding: 10px;
     color: white;
     font-size: 12px;
 
+}
+
+footer nav .navFooter a:hover {
+    color: #0808eb;
+    cursor: pointer;
+}
+
+.iconNetworks ul {
+    display: flex;
+    margin: 15px 20px;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.iconNetworks ul li a i {
+    font-size: 20px;
+    color: #0808eb;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #0808eb;
+}
+
+.iconNetworks ul li a i:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #1d1de1;
+    cursor: pointer;
+    transition: ease-in-out 2s;
+    transform: rotateZ(190deg);
+}
+
+/* reponsive producto y promociones */
+/* Estilos generales para pantallas grandes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrar el contenedor principal */
+.mainProductos {
+    width: 80%;
+    margin: 0 auto;
+}
+/* MQ para producto y promaciones */
+
+/* Media query para pantallas desktop */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 40px;
+        height: 80px;
+    }
+
+    header .logoHeader {
+        width: 120px;
+        height: 80px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .grilla, .grillaPromo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media query para pantallas medianas */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 30px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    header .logoHeader {
+        width: 100px;
+        height: 60px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .grilla, .grillaPromo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardProducto, .cardPromo {
+        width: 48%;
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+    header, footer {
+        padding: 5px 20px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    header .logoHeader {
+        width: 80px;
+        height: 50px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    .grilla, .grillaPromo {
+        grid-template-columns: 1fr;
+    }
+
+    .cardProducto, .cardPromo {
+        width: 100%;
+    }
+
+    .cardPromo div {
+        width: 100px;
+        height: 80px;
+    }
 }
