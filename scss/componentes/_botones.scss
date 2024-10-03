@@ -1,0 +1,10 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.button-producto{
+  @include button-style($color-complementario, $hover-color);
+}
+
+.button-promo{
+  @include button-style($color-promo, $hover-promo);
+}

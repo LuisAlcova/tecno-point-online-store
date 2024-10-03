@@ -1,0 +1,35 @@
+@import '../base/variables';
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: $layout-background;
+  height: 10%;
+  width: 100%;
+  padding: 20px;
+  
+  .iconNetworks {
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li a {
+        i {
+          font-size: 20px;
+          color: $color-complementario;
+          padding: $padding-default;
+          border-radius: 50%;
+          border: 1px solid $color-complementario;
+
+          &:hover {
+            color: $font-color;
+            background-color: $color-complementario;
+            border: 1px solid $font-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin button-style($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: $font-color;
+    border: none;
+    padding: $padding-default 20px;
+    border-radius: $border-radius-default;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+@mixin mobile {
+    @media only screen and (max-width: $breakpoint-sm) {
+      @content;  
+    }
+}
+@mixin table {
+    @media only screen and (max-width: $breakpoint-md) {
+        @content; 
+    }
+}
+@mixin desktop {
+    @media only screen and (max-width: $breakpoint-lg) {
+        @content; 
+    }
+}

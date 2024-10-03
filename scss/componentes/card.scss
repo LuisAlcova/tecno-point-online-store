@@ -1,0 +1,26 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.card {
+  background-color: $color-card;
+  border: 1px solid $color-box-shadow;
+  border-radius: $border-radius-default;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: $border-radius-default;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: $color-promo;
+  }
+}
